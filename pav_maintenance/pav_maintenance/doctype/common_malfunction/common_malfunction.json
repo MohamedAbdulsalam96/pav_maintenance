@@ -1,0 +1,85 @@
+{
+ "engine": "InnoDB", 
+ "field_order": [
+  "malfunction", 
+  "malfunctions_group", 
+  "column_break_4", 
+  "disabled", 
+  "company", 
+  "section_break_4", 
+  "description"
+ ], 
+ "autoname": "field:malfunction", 
+ "name": "Common Malfunction", 
+ "quick_entry": 1, 
+ "fields": [
+  {
+   "label": "Malfunctions Name", 
+   "in_list_view": 1, 
+   "fieldtype": "Data", 
+   "reqd": 1, 
+   "fieldname": "malfunction", 
+   "unique": 1
+  }, 
+  {
+   "in_standard_filter": 1, 
+   "label": "Malfunctions Group", 
+   "in_list_view": 1, 
+   "fieldtype": "Link", 
+   "fieldname": "malfunctions_group", 
+   "options": "Malfunctions Group"
+  }, 
+  {
+   "fieldname": "column_break_4", 
+   "fieldtype": "Column Break"
+  }, 
+  {
+   "default": "0", 
+   "in_list_view": 1, 
+   "fieldname": "disabled", 
+   "fieldtype": "Check", 
+   "label": "Disabled"
+  }, 
+  {
+   "in_standard_filter": 1, 
+   "label": "Company", 
+   "in_list_view": 1, 
+   "fieldtype": "Link", 
+   "fieldname": "company", 
+   "options": "Company"
+  }, 
+  {
+   "fieldname": "section_break_4", 
+   "fieldtype": "Section Break"
+  }, 
+  {
+   "fieldname": "description", 
+   "fieldtype": "Text Editor", 
+   "label": "Description"
+  }
+ ], 
+ "creation": "2021-02-28 19:42:29.576061", 
+ "doctype": "DocType", 
+ "module": "PAV Maintenance", 
+ "modified": "2021-03-06 05:01:00.952159", 
+ "sort_order": "DESC", 
+ "track_changes": 1, 
+ "owner": "Administrator", 
+ "modified_by": "Administrator", 
+ "editable_grid": 1, 
+ "sort_field": "modified", 
+ "permissions": [
+  {
+   "read": 1, 
+   "create": 1, 
+   "share": 1, 
+   "write": 1, 
+   "report": 1, 
+   "export": 1, 
+   "print": 1, 
+   "role": "System Manager", 
+   "email": 1, 
+   "delete": 1
+  }
+ ]
+}

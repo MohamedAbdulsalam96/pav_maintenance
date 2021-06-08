@@ -1,0 +1,30 @@
+{
+ "creation": "2021-02-28 19:14:59.885206",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "device_accessorie"
+ ],
+ "fields": [
+  {
+   "fieldname": "device_accessorie",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Device Accessorie",
+   "options": "Device Accessory",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-03-08 17:56:50.369281",
+ "modified_by": "Administrator",
+ "module": "PAV Maintenance",
+ "name": "Device Accessories",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,131 @@
+{
+ "autoname": "field:malfunction",
+ "creation": "2021-02-28 17:52:15.424028",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "malfunction",
+  "period_of_repair",
+  "level",
+  "column_break_4",
+  "malfunction_type",
+  "model",
+  "section_break_7",
+  "items",
+  "column_break_9",
+  "replacement_items",
+  "engineer_fees_details_section",
+  "engineer_fees",
+  "section_break_4",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "malfunction",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Malfunction Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "(Days)",
+   "fieldname": "period_of_repair",
+   "fieldtype": "Int",
+   "in_standard_filter": 1,
+   "label": "Period of Repair"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Level",
+   "options": "\n1\n2\n3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "malfunction_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Malfunction Type",
+   "options": "Malfunction Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Link",
+   "label": "Model",
+   "options": "Model"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "replacement_items",
+   "fieldtype": "Table",
+   "label": "Replacement Items",
+   "options": "Item"
+  },
+  {
+   "fieldname": "engineer_fees_details_section",
+   "fieldtype": "Section Break",
+   "label": "Engineer Fees Details"
+  },
+  {
+   "fieldname": "engineer_fees",
+   "fieldtype": "Table",
+   "label": "Engineer Fees",
+   "options": "Engineer Fees"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "More Information"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  }
+ ],
+ "modified": "2021-03-06 05:00:50.249949",
+ "modified_by": "Administrator",
+ "module": "PAV Maintenance",
+ "name": "Malfunction",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

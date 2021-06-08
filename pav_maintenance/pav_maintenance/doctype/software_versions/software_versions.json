@@ -1,0 +1,63 @@
+{
+ "autoname": "field:software_version",
+ "creation": "2021-02-28 18:12:37.668248",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "software_version",
+  "disable",
+  "items_details_section",
+  "item"
+ ],
+ "fields": [
+  {
+   "fieldname": "software_version",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Software Version",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Disable"
+  },
+  {
+   "fieldname": "items_details_section",
+   "fieldtype": "Section Break",
+   "label": "Items Details"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Table",
+   "label": "Item",
+   "options": "Item"
+  }
+ ],
+ "modified": "2021-03-06 05:01:11.675804",
+ "modified_by": "Administrator",
+ "module": "PAV Maintenance",
+ "name": "Software Versions",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
