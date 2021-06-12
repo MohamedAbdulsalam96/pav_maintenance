@@ -8,6 +8,7 @@
   "maintenance_workshop",
   "disable",
   "accounts_section",
+  "pos_profile",
   "cost_center",
   "column_break_5",
   "mode_of_payment",
@@ -59,11 +60,17 @@
    "fieldtype": "Link",
    "label": "Account",
    "options": "Account"
+  },
+  {
+   "fieldname": "pos_profile",
+   "fieldtype": "Link",
+   "label": "POS Profile",
+   "options": "POS Profile"
   }
  ],
- "modified": "2021-03-06 05:00:58.606726",
+ "modified": "2021-06-12 10:24:23.720650",
  "modified_by": "Administrator",
- "module": "PAV Maintenance",
+ "module": "Pav Maintenance",
  "name": "Maintenance Workshop",
  "owner": "Administrator",
  "permissions": [

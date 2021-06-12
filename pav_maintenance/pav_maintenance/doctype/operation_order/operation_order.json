@@ -1,53 +1,61 @@
 {
+ "autoname": "naming_series:",
  "creation": "2021-02-28 19:35:30.505295",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "status_details_section",
+  "naming_series",
   "status",
-  "section_break_7",
+  "column_break_3",
+  "posting_date",
   "reception_status",
+  "status_details_section",
   "maintenance_workshop",
   "imei",
-  "column_break_9",
+  "imei_status",
   "item",
   "item_name",
-  "description",
   "item_group",
-  "section_break_4",
-  "branch",
-  "purchase_date",
-  "column_break_11",
+  "item_description",
   "customer",
   "customer_name",
-  "phone",
-  "sale_information",
-  "section_break_6",
+  "purchase_date",
+  "column_break_15",
   "consumer",
   "consumer_name",
-  "priority",
+  "consumer_mobile_no",
   "device_accessories",
-  "column_break_20",
+  "mobile_pin",
+  "priority",
   "notes",
-  "section_break_13",
+  "column_break_23",
   "warranty",
-  "delivery_date",
-  "section_break_17",
-  "common_malfunction",
-  "section_break_19",
-  "account",
-  "column_break_22",
-  "payment",
   "initial_approval",
-  "section_break_25",
-  "engineer_status",
+  "initial_amount",
+  "payment_way",
+  "delivery_date",
   "default_engineer",
+  "engineer_name",
   "engineer_user_id",
-  "column_break_28",
+  "malfunction_and_ripairs_section",
+  "common_malfunction",
+  "malfunction_item",
+  "section_break_34",
+  "total_amount",
+  "column_break_36",
+  "total_quantity",
+  "engineer_details_section",
+  "engineer_status",
+  "column_break_40",
   "engineer_report",
-  "section_break_43",
-  "items_used"
+  "accounting_dimension_section",
+  "company",
+  "branch",
+  "column_break_45",
+  "payment_account",
+  "mode_of_payment",
+  "amended_from"
  ],
  "fields": [
   {
@@ -61,10 +69,6 @@
    "label": "Status",
    "options": "\nPending\nCompleted\nCanceled",
    "read_only": 1
-  },
-  {
-   "fieldname": "section_break_7",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "reception_status",
@@ -86,10 +90,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_9",
-   "fieldtype": "Column Break"
-  },
-  {
    "fetch_from": "imei.item_code",
    "fieldname": "item",
    "fieldtype": "Link",
@@ -104,23 +104,12 @@
    "read_only": 1
   },
   {
-   "fetch_from": "item.description",
-   "fieldname": "description",
-   "fieldtype": "Text",
-   "label": "Description",
-   "read_only": 1
-  },
-  {
    "fetch_from": "item.item_group",
    "fieldname": "item_group",
    "fieldtype": "Link",
    "label": "Item Group",
    "options": "Item Group",
    "read_only": 1
-  },
-  {
-   "fieldname": "section_break_4",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "branch",
@@ -132,10 +121,6 @@
    "fieldname": "purchase_date",
    "fieldtype": "Date",
    "label": "Purchase Date"
-  },
-  {
-   "fieldname": "column_break_11",
-   "fieldtype": "Column Break"
   },
   {
    "fetch_from": "imei.customer",
@@ -152,22 +137,6 @@
    "fieldtype": "Data",
    "label": "Customer Name",
    "read_only": 1
-  },
-  {
-   "fieldname": "phone",
-   "fieldtype": "Data",
-   "label": "Phone"
-  },
-  {
-   "fieldname": "sale_information",
-   "fieldtype": "Table",
-   "hidden": 1,
-   "label": "Sale information",
-   "options": "Sale Information"
-  },
-  {
-   "fieldname": "section_break_6",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "consumer",
@@ -195,23 +164,15 @@
    "options": "Device Accessories"
   },
   {
-   "fieldname": "column_break_20",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "notes",
    "fieldtype": "Small Text",
    "label": "Notes"
   },
   {
-   "fieldname": "section_break_13",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "warranty",
    "fieldtype": "Select",
-   "label": "Warranty ",
-   "options": "\n\u062a\u062d\u062a \u0627\u0644\u0636\u0645\u0627\u0646\n\u062e\u0627\u0631\u062c \u0627\u0644\u0636\u0645\u0627\u0646",
+   "label": "Initial Warranty",
+   "options": "\nUnder Warranty\nOut of Warranty",
    "reqd": 1
   },
   {
@@ -220,46 +181,17 @@
    "label": "Delivery Date"
   },
   {
-   "fieldname": "section_break_17",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "common_malfunction",
    "fieldtype": "Table",
    "label": "Common Malfunction",
    "options": "Operation Order CMs"
   },
   {
-   "fieldname": "section_break_19",
-   "fieldtype": "Section Break",
-   "label": "Accounts Details"
-  },
-  {
-   "fieldname": "account",
-   "fieldtype": "Link",
-   "label": "Account",
-   "options": "Account"
-  },
-  {
-   "fieldname": "column_break_22",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "payment",
-   "fieldtype": "Select",
-   "label": "Payment",
-   "options": "\n\u0646\u0642\u062f\u0627\u064b\n\u0622\u062c\u0644"
-  },
-  {
+   "description": "Customer approval of the cost, whatever the price",
    "fieldname": "initial_approval",
    "fieldtype": "Select",
    "label": "Initial Approval",
-   "options": "\n\u0646\u0639\u0645\n\u0644\u0627"
-  },
-  {
-   "fieldname": "section_break_25",
-   "fieldtype": "Section Break",
-   "label": "Engineer Details"
+   "options": "\nYes\nNo"
   },
   {
    "fieldname": "engineer_status",
@@ -276,7 +208,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "default_engineer.engineer_user_id",
+   "fetch_from": "default_engineer.employee_user_id",
    "fieldname": "engineer_user_id",
    "fieldtype": "Link",
    "label": "Engineer User ID",
@@ -284,28 +216,163 @@
    "read_only": 1
   },
   {
-   "fieldname": "column_break_28",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "engineer_report",
    "fieldtype": "Small Text",
    "label": "Engineer Report"
   },
   {
-   "fieldname": "section_break_43",
+   "fieldname": "initial_amount",
+   "fieldtype": "Currency",
+   "label": "Initial Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "OPR-ORD-.YYYY.-"
+  },
+  {
+   "fetch_from": "item.description",
+   "fieldname": "item_description",
+   "fieldtype": "Text",
+   "label": "Item Description",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "consumer.mobile_no",
+   "fetch_if_empty": 1,
+   "fieldname": "consumer_mobile_no",
+   "fieldtype": "Data",
+   "label": "Consumer Mobile No"
+  },
+  {
+   "fieldname": "mobile_pin",
+   "fieldtype": "Data",
+   "label": "Mobile PIN"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fetch_from": "imei.status",
+   "fieldname": "imei_status",
+   "fieldtype": "Select",
+   "label": "IMEI Status",
+   "options": "\nActive\nInactive\nDelivered\nExpired",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accounting_dimension_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Dimension"
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_account",
+   "fieldtype": "Link",
+   "label": "Payment Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "malfunction_and_ripairs_section",
+   "fieldtype": "Section Break",
+   "label": "Malfunction and Ripairs"
+  },
+  {
+   "fieldname": "malfunction_item",
+   "fieldtype": "Table",
+   "label": "Malfunction Item",
+   "options": "Malfunction Item"
+  },
+  {
+   "fieldname": "engineer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Engineer Details"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_34",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "items_used",
-   "fieldtype": "Table",
-   "label": "Items Used",
-   "options": "Operation Order Item"
+   "default": "0",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_quantity",
+   "fieldtype": "Float",
+   "label": "Total Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_45",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "default_engineer.engineer",
+   "fieldname": "engineer_name",
+   "fieldtype": "Data",
+   "label": "Engineer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Operation Order",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Data",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "payment_way",
+   "fieldtype": "Select",
+   "label": "Payment Way",
+   "options": "\nCash\nDeferred"
   }
  ],
- "modified": "2021-03-08 18:26:53.516356",
+ "is_submittable": 1,
+ "modified": "2021-06-12 13:39:06.823099",
  "modified_by": "Administrator",
- "module": "PAV Maintenance",
+ "module": "Pav Maintenance",
  "name": "Operation Order",
  "owner": "Administrator",
  "permissions": [
@@ -322,8 +389,8 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "consumer_name",
  "track_changes": 1
 }

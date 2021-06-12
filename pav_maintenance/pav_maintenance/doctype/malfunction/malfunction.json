@@ -1,49 +1,39 @@
 {
- "autoname": "field:malfunction",
+ "autoname": "naming_series:",
  "creation": "2021-02-28 17:52:15.424028",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "malfunction",
+  "naming_series",
+  "malfunction_no",
+  "malfunction_name",
   "period_of_repair",
-  "level",
+  "malfunction_level",
   "column_break_4",
   "malfunction_type",
   "model",
   "section_break_7",
-  "items",
+  "malfunction_items",
   "column_break_9",
+  "replacement_item",
+  "replacement_item_name",
+  "replacement_item_description",
   "replacement_items",
   "engineer_fees_details_section",
+  "repair_fees",
+  "unit_price",
   "engineer_fees",
   "section_break_4",
   "description"
  ],
  "fields": [
   {
-   "fieldname": "malfunction",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Malfunction Name",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
    "description": "(Days)",
    "fieldname": "period_of_repair",
    "fieldtype": "Int",
    "in_standard_filter": 1,
    "label": "Period of Repair"
-  },
-  {
-   "fieldname": "level",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Level",
-   "options": "\n1\n2\n3",
-   "reqd": 1
   },
   {
    "fieldname": "column_break_4",
@@ -69,20 +59,8 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "items",
-   "fieldtype": "Table",
-   "label": "Items",
-   "options": "Item"
-  },
-  {
    "fieldname": "column_break_9",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "replacement_items",
-   "fieldtype": "Table",
-   "label": "Replacement Items",
-   "options": "Item"
   },
   {
    "fieldname": "engineer_fees_details_section",
@@ -104,11 +82,87 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description"
+  },
+  {
+   "fieldname": "replacement_item",
+   "fieldtype": "Link",
+   "label": "Replacement Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "malfunction_items",
+   "fieldtype": "Table",
+   "label": "Malfunction Item",
+   "options": "Malfunction Item"
+  },
+  {
+   "fieldname": "replacement_items",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Replacement Item",
+   "options": "Malfunction Item"
+  },
+  {
+   "fieldname": "malfunction_no",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Malfunction No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Currency",
+   "label": "Unit Price",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fetch_from": "replacement_item.item_name",
+   "fieldname": "replacement_item_name",
+   "fieldtype": "Data",
+   "label": "Replacement Item Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "replacement_item.description",
+   "fieldname": "replacement_item_description",
+   "fieldtype": "Text Editor",
+   "label": "Replacement Item Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "MAFU-"
+  },
+  {
+   "fieldname": "malfunction_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Malfunction Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "malfunction_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Malfunction Level",
+   "options": "\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+   "reqd": 1
+  },
+  {
+   "fieldname": "repair_fees",
+   "fieldtype": "Currency",
+   "label": "Repair Fees",
+   "options": "Company:company:default_currency"
   }
  ],
- "modified": "2021-03-06 05:00:50.249949",
+ "modified": "2021-06-12 12:18:41.923960",
  "modified_by": "Administrator",
- "module": "PAV Maintenance",
+ "module": "Pav Maintenance",
  "name": "Malfunction",
  "owner": "Administrator",
  "permissions": [
@@ -127,5 +181,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "malfunction_no",
  "track_changes": 1
 }

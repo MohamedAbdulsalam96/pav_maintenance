@@ -1,0 +1,152 @@
+{
+ "creation": "2021-06-12 10:58:16.416264",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "malfunction_no",
+  "malfunction_name",
+  "malfunction_level",
+  "malfunction_type",
+  "column_break_5",
+  "item_code",
+  "item_name",
+  "description",
+  "column_break_9",
+  "unit_price",
+  "qty",
+  "section_break_13",
+  "with_fees",
+  "repair_fees",
+  "column_break_15",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fetch_from": "malfunction_no.replacement_item",
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "malfunction_no.replacement_item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "malfunction_no.replacement_item_description",
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "malfunction_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Malfunction No",
+   "options": "Malfunction"
+  },
+  {
+   "fetch_from": "malfunction_no.malfunction_level",
+   "fieldname": "malfunction_level",
+   "fieldtype": "Data",
+   "label": "Malfunction Level",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "malfunction_no.malfunction_type",
+   "fieldname": "malfunction_type",
+   "fieldtype": "Link",
+   "label": "Malfunction Type",
+   "options": "Malfunction Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "malfunction_no.repair_fees",
+   "fetch_if_empty": 1,
+   "fieldname": "repair_fees",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Repair Fees"
+  },
+  {
+   "columns": 1,
+   "depends_on": "malfunction_no",
+   "fetch_from": "malfunction_no.unit_price",
+   "fetch_if_empty": 1,
+   "fieldname": "unit_price",
+   "fieldtype": "Currency",
+   "label": "Unit Price",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "default": "1",
+   "depends_on": "malfunction_no",
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fetch_from": "malfunction_no.malfunction_name",
+   "fieldname": "malfunction_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Malfunction Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "with_fees",
+   "fieldtype": "Check",
+   "label": "With Fees"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "depends_on": "malfunction_no",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-06-12 13:04:34.551392",
+ "modified_by": "Administrator",
+ "module": "Pav Maintenance",
+ "name": "Malfunction Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -7,7 +7,7 @@
  "field_order": [
   "full_name",
   "gender",
-  "phone_no",
+  "mobile_no",
   "column_break_4",
   "address",
   "company"
@@ -31,12 +31,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "phone_no",
-   "fieldtype": "Data",
-   "label": "Phone No",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_4",
    "fieldtype": "Column Break"
   },
@@ -54,11 +48,18 @@
    "in_standard_filter": 1,
    "label": "Company",
    "options": "Company"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "options": "Phone",
+   "reqd": 1
   }
  ],
- "modified": "2021-03-06 05:01:03.335879",
+ "modified": "2021-06-12 10:36:47.275218",
  "modified_by": "Administrator",
- "module": "PAV Maintenance",
+ "module": "Pav Maintenance",
  "name": "Consumer",
  "owner": "Administrator",
  "permissions": [
